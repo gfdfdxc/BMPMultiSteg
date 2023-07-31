@@ -13,7 +13,9 @@ A tool that can steganographically embed one file into one or multiple BMP image
 
 ### 使用
 
-打开软件选择工作目录，工作目录中应该包含待隐写的图片，隐写后的图片会在保存在`./steg`文件夹中
+打开软件选择工作目录，工作目录中应该包含待隐写的图片，你可以任意选择文件夹中的一张或几张图片来被隐写。
+
+隐写后的图片会在保存在`./steg`文件夹中
 
 提取文件时需要把工作目录切换到包含隐写后的图片的文件夹，如成功提取将会在当前目录生成`extracted.bin`
 
@@ -24,6 +26,36 @@ A tool that can steganographically embed one file into one or multiple BMP image
 | Carrier1            | Carrier2                                                     | Data                                                         |
 | ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![1](testbmp/1.bmp) | ![2](testbmp/2.bmp) | ![award](testbmp/award.jpg) |
+
+```text
++================+
+|    Selected    |
++================+
+index:0, name: 1.bmp
+index:1, name: 2.bmp
++================+
+|    Selecting   |
++================+
+
+        You have selected all the files!
+Which file do you want to steg?
+<Your Working Folder>\award.jpg
+You have selected 2 files.
+steg file size is 157248
+A subdirectory or file steg already exists.
+part file size is 78624
+fullPartFileSize is 78656
+LSB index: 0 hiding completed.
+part file size is 78624
+fullPartFileSize is 78656
+LSB index: 1 hiding completed.
+Success!
+Working Folder:
+<Your Working Folder>
+
+<1>File Info <2>Steg <3>Extract <4>Change Working Dir <Ctrl-C>Exit
+```
+
 
 | Result1             | Result2             |
 | ------------------- | ------------------- |
@@ -124,7 +156,9 @@ Just download the binaries compiled by GitHub directly from [Releases](https://g
 
 ### How to use
 
-Open the software and select the working directory, the working directory should contain the image to be steganographed, the steganographed image will be saved in the `./steg` folder.
+Open the software and select the working directory, which should contain the images to be steganographed, you can choose any one or several images in the folder to be steganographed.
+
+The steganized images will be saved in the `./steg` folder.
 
 When extracting the file, you need to switch the working directory to the folder that contains the steganographic image, if the extraction is successful, it will generate `extracted.bin` in the current directory.
 
